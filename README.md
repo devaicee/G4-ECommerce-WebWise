@@ -1,5 +1,5 @@
 <h1>WebWise</h1>
-Overview
+
 The project aims to develop a purpose-built e-commerce website application, strategically addressing deficiencies in the current digital products market. It focuses on establishing a centralized platform with heightened security, innovative monetization models, and features designed to enhance the overall user experience for both consumers and content creators.
 
 <h2>📌Objectives</h2>

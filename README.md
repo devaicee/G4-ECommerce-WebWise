@@ -17,7 +17,7 @@ User-friendly interface.
 <h3>Vision</h3>☝️
 By streamlining the purchasing process and offering a user-friendly interface, the website aims to provide a seamless experience for customers seeking digital products. The initiative is envisioned as a transformative solution, not only rectifying current challenges but also contributing to the growth and vibrancy of the digital product industry.
 
-💢<h4>Contributors</h4>👻
+<h4>Contributors👻</h4>
 Arshane Lee Sucong<br>
 Arman James Dela Pena<br>
 Renz Carlou Castro

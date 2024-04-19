@@ -21,12 +21,4 @@ By streamlining the purchasing process and offering a user-friendly interface, t
 Arshane Lee Sucong<br>
 Arman James Dela Pena<br>
 Renz Carlou Castro
-<br>
-##How to Contribute
-We welcome contributotions form developers, educators, and researchers interested in improving educational oractices
-and assessing the effectiveness of eduational programs. If you'd like to contribute, please follow these steps:
-1. Fork the repository
-2. Create a new branch for your feature or bug fix
-3. Make your changes and ensure they adhere to our coding standards
-4. Test your changes thoroughly
-5. Submit a pull request detailing your changes
+

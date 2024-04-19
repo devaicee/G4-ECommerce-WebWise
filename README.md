@@ -21,7 +21,7 @@ By streamlining the purchasing process and offering a user-friendly interface, t
 Arshane Lee Sucong<br>
 Arman James Dela Pena<br>
 Renz Carlou Castro
-
+<br>
 ##How to Contribute
 We welcome contributotions form developers, educators, and researchers interested in improving educational oractices
 and assessing the effectiveness of eduational programs. If you'd like to contribute, please follow these steps:

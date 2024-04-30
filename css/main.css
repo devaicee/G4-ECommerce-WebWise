@@ -5869,4 +5869,8 @@ label {
   position: absolute;
 }
     
-/*# sourceMappingURL=main.css.map */
+.services-area {
+  width: 1440px; 
+  height: 103px; 
+  position: relative
+}

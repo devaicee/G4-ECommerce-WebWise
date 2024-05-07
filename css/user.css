@@ -1,0 +1,119 @@
+/* banner area css
+============================================================================================ */
+.banner-area1 {
+  position: relative;
+}
+
+.banner-area1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/img/banner/wallpaperflare.com_wallpaper.jpg) center no-repeat;
+  background-size: cover;
+  opacity: 0.45}
+  @media (max-width: 768px) {
+    .banner-area1 .fullscreen {
+      height: 550px !important; } }
+  .banner-area1 .active-banner-slider .owl-nav {
+    position: absolute;
+    right: 0;
+    bottom: -200px; }
+    @media (max-width: 1920px) {
+      .banner-area1 .active-banner-slider .owl-nav {
+        right: -115px; } }
+    @media (max-width: 1680px) {
+      .banner-area1 .active-banner-slider .owl-nav {
+        right: 0px; } }
+    @media (max-width: 991px) {
+      .banner-area1 .active-banner-slider .owl-nav {
+        display: none; } }
+    .banner-area1 .active-banner-slider .owl-nav .owl-prev,
+    .banner-area1 .active-banner-slider .owl-nav .owl-next {
+      display: inline-block;
+      margin: 20px;
+      opacity: .5;
+      -webkit-transition: all 0.3s ease 0s;
+      -moz-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s; }
+      .banner-area1 .active-banner-slider .owl-nav .owl-prev:hover,
+      .banner-area1 .active-banner-slider .owl-nav .owl-next:hover {
+        opacity: 1; }
+
+.user-banner {
+  width: 100%; 
+  text-align: center; 
+}
+
+.Ellipse1 {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%; 
+  position: relative;
+  transform: translateY(-70%);
+}
+
+.nameH {
+  color: black;
+  text-align: center; 
+  transform: translateY(-140%);
+} 
+
+.headline {
+  color: black;
+  text-align: center; 
+  font-size: 17px;
+  transform: translateY(-10%);
+} 
+
+.Psocials {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  transform: translateY(-240%);
+}
+
+
+.Psocials img {
+  width: 36px;
+  height: 36px;
+  border-radius: 90%;
+  margin: 0 5px;
+}
+
+.offers {
+  height: 750px;
+  width: 50%;
+  padding-top: 25px;
+}
+
+
+.PServices {
+  width: 241px; 
+  height: 101px; 
+  opacity: 0.75; 
+  color: #F4752E; 
+  font-size: 40px; 
+  font-family: Gurajada; 
+  font-weight: 400; 
+  line-height: 101px;
+  padding-left: 215px; 
+  padding-bottom: 180px; 
+}
+
+.ProductsP{
+  width: 241px; 
+  height: 101px; 
+  opacity: 0.75; 
+  color: #F4752E; 
+  font-size: 40px; 
+  font-family: Gurajada; 
+  font-weight: 400; 
+  line-height: 101px;
+  padding-left: 215px; 
+  padding-bottom: 110px; 
+  padding-top: 25px;
+}

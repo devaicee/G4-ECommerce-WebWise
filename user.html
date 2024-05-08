@@ -32,53 +32,137 @@
 	<link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/user.css">
 </head>
-
-<body>
-
-    <!-- Start Banner Area -->
-		<section class="banner-area1">	
-			<div class="container">
-				<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
-					<!-- Add your breadcrumb content here if needed -->
-				</div>
-				<div class="user-banner">
-					<img class="Ellipse1" src="img/display-profile.jpg" />
-					<div class="nameH">
-						<h2>Arshane Lee</h2>
-						<div class="headline">
-							BSIT <span class="separator">|</span> Freelance
-						</div>
+	<!-- Start Header Area -->
+	<header class="header_area sticky-header">
+		<div class="main_menu">
+			<nav class="navbar navbar-expand-lg navbar-light main_box">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<a class="navbar-brand logo_h" href="index.html"><img src="img/webwiselogo.png"></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav ml-auto">
+							<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+							<li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+							<li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Pages</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="index.html">Orders</a></li>
+									<li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+								</ul>
+							</li>
+							<li class="nav-item"><a class="nav-link" href="login.html"><img src="img/figIcons/header/user.png" alt="User icon" width="23" height="21.23"> Login/Join</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li class="nav-item"><a href="cart.html" class="cart"><span class="ti-bag"></span></a></li>
+							<li class="nav-item">
+								<button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
+							</li>
+						</ul>
 					</div>
 				</div>
-				<div class="Psocials">
-					<a href="https://example.com/x">
-						<img class="InIcon" src="img/figIcons/socials/profile/ig.png" />
-					</a>
-					<a href="https://example.com/tiktok">
-						<img class="TtIcon" src="img/figIcons/socials/tiktok.png" />
-					</a>
-					<a href="https://example.com/fb">
-						<img class="FbIcon" src="img/figIcons/socials/fb.png" />
-					</a>
-				</div>				
+			</nav>
+		</div>
+		<div class="search_input" id="search_input_box">
+			<div class="container">
+				<form class="d-flex justify-content-between">
+					<input type="text" class="form-control" id="search_input" placeholder="Search Here">
+					<button type="submit" class="btn"></button>
+					<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
+				</form>
 			</div>
-		</section>
-  <!-- End Banner Area -->
-
-<!-- Offers Area-->
-	<section class="offers">
-		<div class="PServices">
-				Services
 		</div>
-		<div class="ProductsP">
-				Products
-		</div>
-	</section>
-<!-- End of offers area-->
+	</header>
+	<!-- End Header Area -->
+<body>
+	<body class="profile-page">
+    <div class="page-header header-filter" data-parallax="true" style="background-image:url('http://wallpapere.org/wp-content/uploads/2012/02/black-and-white-city-night.png');"></div>
+    <div class="main main-raised">
+    <div class="profile-content">
+            <div class="container">
+                <div class="row">
+                  <div class="col-md-6 ml-auto mr-auto">
+                     <div class="profile">
+                          <div class="avatar">
+                              <img src="img/display-profile.jpg" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+                          </div>
+                          <div class="name">
+                              <h3 class="title">Arshane Lee</h3>
+                <h6>Designer</h6>
+                <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a>
+                                <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
+                                <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="description text-center">
+                    <p>An artist of considerable range, Chet Faker — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. </p>
+                </div>
+        <div class="row">
+          <div class="col-md-6 ml-auto mr-auto">
+						<div class="profile-tabs">
+							<ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
+								<li class="nav-item">
+										<a class="nav-link active" href="#studio" role="tab" data-toggle="tab">
+											<i class="material-icons">camera</i>
+											Studio
+										</a>
+								</li>
+								<li class="nav-item">
+										<a class="nav-link" href="#works" role="tab" data-toggle="tab">
+											<i class="material-icons">palette</i>
+												Work
+										</a>
+								</li>
+								<li class="nav-item">
+										<a class="nav-link" href="#favorite" role="tab" data-toggle="tab">
+											<i class="material-icons">favorite</i>
+												Favorite
+										</a>
+								</li>
+							</ul>
+						</div>
+            </div>
+            </div>
+        
+          <div class="tab-content tab-space">
+          <div class="tab-pane active text-center gallery" id="studio">
+          <div class="row">
+          </div>
+        </div>
+            <div class="tab-pane text-center gallery" id="works">
+            <div class="row">
+            </div>
+        </div>
+            <div class="tab-pane text-center gallery" id="favorite">
+            <div class="row">
+          </div>
+				</div>
+				</div>
 
-<!--About Me area-->
-
-<!--End of about me area-->
+        
+            </div>
+        </div>
+  </div>
+  
+  <footer class="footer text-center ">
+        <p>Write <a href="https://demos.creative-tim.com/material-kit/index.html" target="_blank">Arshane Lee</a> a recommendation</p>
+    </footer>
+  
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+</body>
 
 	<!-- start footer Area -->
 	<footer class="footer-area section_gap">
@@ -145,6 +229,7 @@
 	<script src="js/countdown.js"></script>
 	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/user.js"></script>
 	<!--gmaps Js-->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
 	<script src="js/gmaps.min.js"></script>

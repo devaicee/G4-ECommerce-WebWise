@@ -13,10 +13,9 @@ $(document).ready(function() {
 
   $navbar_collapse = $('.navbar').find('.navbar-collapse');
 
-  //  Activate the Tooltips
+
   $('[data-toggle="tooltip"], [rel="tooltip"]').tooltip();
 
-  // Activate Popovers
   $('[data-toggle="popover"]').popover();
 
   if ($('.navbar-color-on-scroll').length != 0) {
@@ -52,3 +51,4 @@ $(document).on('click', '.navbar-toggler', function() {
     setTimeout(function() {
       $toggle.addClass('toggled');
     }, 580);
+  }}

@@ -7,65 +7,71 @@
     background: white;
 }
 
+/* Category styles */
+.Business,
+.DigitalMarketing,
+.GraphicsDesign,
+.MusicAudio,
+.Lifestyle {
+    color: rgba(0, 0, 0, 0.70);
+    font-size: 16px;
+    font-family: Bookshelf Symbol 7;
+    font-weight: 400;
+    line-height: 33px;
+    word-wrap: break-word;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s, text-decoration 0.3s;
+    text-decoration: none;
+}
+
+/* Hover effect for category */
+.Business:hover,
+.DigitalMarketing:hover,
+.GraphicsDesign:hover,
+.MusicAudio:hover,
+.Lifestyle:hover {
+    text-decoration: underline;
+}
+
+/* Business category */
 .Business {
     width: 120px;
     height: 38px;
-    left: 525px;
+    left: 635px;
     top: 148px;
-    position: absolute;
-    color: rgba(0, 0, 0, 0.70);
-    font-size: 16px;
-    font-family: Bookshelf Symbol 7;
-    font-weight: 400;
-    line-height: 33px;
-    word-wrap: break-word;
 }
 
+/* Digital Marketing category */
 .DigitalMarketing {
     width: 226px;
     height: 38px;
-    left: 620px;
+    left: 740px;
     top: 148px;
-    position: absolute;
-    color: rgba(0, 0, 0, 0.70);
-    font-size: 16px;
-    font-family: Bookshelf Symbol 7;
-    font-weight: 400;
-    line-height: 33px;
-    word-wrap: break-word;
 }
 
+/* Graphics Design category */
 .GraphicsDesign {
     width: 226px;
     height: 38px;
-    left: 770px;
+    left: 910px;
     top: 148px;
-    position: absolute;
-    color: rgba(0, 0, 0, 0.70);
-    font-size: 16px;
-    font-family: Bookshelf Symbol 7;
-    font-weight: 400;
-    line-height: 33px;
-    word-wrap: break-word;
 }
 
+/* Music and Audio category */
 .MusicAudio {
-    width: 186px;
+    width: 226px;
     height: 38px;
-    left: 930px;
+    left: 1072px; /* Adjusted position to fit between Graphics Design and Lifestyle */
     top: 148px;
-    position: absolute;
-    color: rgba(0, 0, 0, 0.70);
-    font-size: 16px;
-    font-family: Bookshelf Symbol 7;
-    font-weight: 400;
-    line-height: 33px;
-    word-wrap: break-word;
 }
+
+/* Lifestyle category */
 .Lifestyle {
     width: 200px;
     height: 38px;
-    left: 1060px;
+    left: 1234px;
     top: 148px;
     position: absolute;
     color: rgba(0, 0, 0, 0.70);
@@ -74,10 +80,18 @@
     font-weight: 400;
     line-height: 33px;
     word-wrap: break-word;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s, text-decoration 0.3s;
+    text-decoration: none;
 }
 
+/* Hover effect for Lifestyle category */
+.Lifestyle:hover {
+    text-decoration: underline;
+}
 
-
+/* Button styles */
 .EngagingButton {
     width: 300px;
     height: 80px;
@@ -91,14 +105,10 @@
     align-items: center;
     gap: 16px;
     display: inline-flex;
-    cursor: pointer;
 }
 
 .EngagingButton .Button {
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding: 14px 16px;
     border-radius: 4px;
     overflow: hidden;
     justify-content: center;
@@ -123,6 +133,7 @@
     word-wrap: break-word;
 }
 
+/* Hover state for EngagingButton */
 .EngagingButton .HoverTrue .Button {
     justify-content: center;
     align-items: center;
@@ -130,8 +141,31 @@
 }
 
 .EngagingButton .HoverFalse .Button {
-    display: none; /* Hide the button initially */
+    display: none;
 }
+       /* CSS for Quick View button */
+       .quick-view-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: orange;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 12px;
+        z-index: 1;
+        border: none;
+        cursor: pointer;
+        display: none; /* Hide initially */
+    }
+
+    .image-container:hover .quick-view-btn {
+        display: block; /* Show on hover */
+    }
+
+
+
 
 /* Footer Styles */
 .footer-area {
@@ -185,3 +219,4 @@
 .Socials .FbIcon {
     right: 0; /* Adjusted right position */
 }
+

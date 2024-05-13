@@ -1,0 +1,20 @@
+textarea {
+  min-height: 150px;
+}
+
+.containerP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensures that the container takes up the full height of the viewport */
+}
+
+/* Optional: You can also center the form within the container */
+.form-auth {
+  max-width: 500px; /* Adjust as needed */
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}

@@ -1,8 +1,43 @@
+/* General styles for the quick view button */
+/* General styles for the quick view button */
+.quick-view-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: orange;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    z-index: 1;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hide initially */
+}
+
+/* Ensure the button appears when hovering over any image */
+.image-container {
+    position: relative; /* Ensure the container is positioned correctly */
+    display: inline-block; /* Allow for inline-block elements */
+}
+
+/* Show the quick view button when hovering over the image container */
+.image-container:hover .quick-view-btn {
+    display: block; /* Show the button on hover */
+}
+
+/* Show the quick view button when hovering over the image container */
+.image-container:hover .quick-view-btn {
+    display: block; /* Show the button on hover */
+}
+
+/* Frame3 styles */
 .Frame3 {
-    width: 1920px;
-    height: 1534px;
-    left: -238px;
-    top: -114px;
+    width: 1700px;  /* Adjusted width */
+    height: 1200px; /* Adjusted height */
+    left: -100px;   /* Adjusted position */
+    top: -50px;     /* Adjusted position */
     position: absolute;
     background: white;
 }
@@ -39,7 +74,7 @@
 .Business {
     width: 120px;
     height: 38px;
-    left: 635px;
+    left: 535px;
     top: 148px;
 }
 
@@ -47,7 +82,7 @@
 .DigitalMarketing {
     width: 226px;
     height: 38px;
-    left: 740px;
+    left: 640px;
     top: 148px;
 }
 
@@ -55,7 +90,7 @@
 .GraphicsDesign {
     width: 226px;
     height: 38px;
-    left: 910px;
+    left: 800px;
     top: 148px;
 }
 
@@ -63,7 +98,7 @@
 .MusicAudio {
     width: 226px;
     height: 38px;
-    left: 1072px; /* Adjusted position to fit between Graphics Design and Lifestyle */
+    left: 962px; /* Adjusted position to fit between Graphics Design and Lifestyle */
     top: 148px;
 }
 
@@ -71,24 +106,8 @@
 .Lifestyle {
     width: 200px;
     height: 38px;
-    left: 1234px;
+    left: 1134px;
     top: 148px;
-    position: absolute;
-    color: rgba(0, 0, 0, 0.70);
-    font-size: 16px;
-    font-family: Bookshelf Symbol 7;
-    font-weight: 400;
-    line-height: 33px;
-    word-wrap: break-word;
-    cursor: pointer;
-    opacity: 0.8;
-    transition: opacity 0.3s, text-decoration 0.3s;
-    text-decoration: none;
-}
-
-/* Hover effect for Lifestyle category */
-.Lifestyle:hover {
-    text-decoration: underline;
 }
 
 /* Button styles */
@@ -96,7 +115,7 @@
     width: 300px;
     height: 80px;
     padding: 16px;
-    left: 1250px;
+    left: 1150px;
     top: 127px;
     position: absolute;
     border-radius: 5px;
@@ -143,29 +162,6 @@
 .EngagingButton .HoverFalse .Button {
     display: none;
 }
-       /* CSS for Quick View button */
-       .quick-view-btn {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: orange;
-        color: white;
-        padding: 5px 10px;
-        border-radius: 20px;
-        font-size: 12px;
-        z-index: 1;
-        border: none;
-        cursor: pointer;
-        display: none; /* Hide initially */
-    }
-
-    .image-container:hover .quick-view-btn {
-        display: block; /* Show on hover */
-    }
-
-
-
 
 /* Footer Styles */
 .footer-area {
@@ -219,4 +215,3 @@
 .Socials .FbIcon {
     right: 0; /* Adjusted right position */
 }
-

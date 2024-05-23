@@ -2,7 +2,7 @@
     width: 1920px;
     height: 1534px;
     left: -238px;
-    top: -114px;
+    top: -100px;
     position: absolute;
     background: white;
 }
@@ -255,4 +255,31 @@
 
 .Socials .FbIcon {
     right: 0; /* Adjusted right position */
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+}
+
+.quick-view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: orange;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    cursor: pointer;
+    border: none;
+}
+
+.image-container:hover .quick-view {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
 }

@@ -8,7 +8,7 @@ function check_logged_in() {
     }
     else {
 
-        header("Location: ../login/");
+        header("Location: login.php");
         exit();
     }
 }
@@ -29,7 +29,7 @@ function check_logged_in_butnot_verified(){
     }
     else {
 
-        header("Location: ../login/");
+        header("Location: login.php");
         exit();
     }
 }
@@ -42,7 +42,7 @@ function check_logged_out() {
     }
     else {
 
-        header("Location: ../home/");
+        header("Location: index.php");
         exit();
     }
 }
@@ -63,7 +63,7 @@ function check_verified() {
     }
     else {
 
-        header("Location: ../login/");
+        header("Location: login.php");
         exit();
     }
 }

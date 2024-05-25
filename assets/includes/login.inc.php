@@ -41,7 +41,7 @@ else {
     }
 
     
-    require '../../assets/setup/db.inc.php';
+    require __DIR__ . '/../setup/db.inc.php';
 
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -191,7 +191,7 @@ else {
                         }
                     }
 
-                    header("Location: ../../home/");
+                    header("Location: /index.php");
                     exit();
                 } 
             } 

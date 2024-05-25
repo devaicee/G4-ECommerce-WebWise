@@ -9,11 +9,12 @@
 
 /* Styling for all images */
 .image {
-    width: 320px; /* Adjust width as needed */
-    height: 370px; /* Maintain aspect ratio */
+    width: 250px; /* Adjust width as needed */
+    height: 250px; /* Make it a square shape */
     margin: 15px; /* Adjust margin as needed */
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for hover effect */
     cursor: pointer; /* Change cursor to pointer */
+    object-fit: cover; /* Ensure image covers the specified dimensions */
 }
 
 /* Add hover effect */

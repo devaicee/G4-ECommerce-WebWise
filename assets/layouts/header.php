@@ -48,6 +48,7 @@ check_remember_me();
 	<link rel="stylesheet" href="css/magnific-popup.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/user.css">
+	<link rel="stylesheet" href="css/util.css">
 </head>
 
 <body>

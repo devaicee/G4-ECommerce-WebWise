@@ -2,9 +2,9 @@
 
 session_start();
 
-require '../../assets/includes/auth_functions.php';
-require '../../assets/includes/datacheck.php';
-require '../../assets/includes/security_functions.php';
+require __DIR__ . '/../../assets/includes/auth_functions.php';
+require __DIR__ . '/../../assets/includes/datacheck.php';
+require __DIR__ . '/../../assets/includes/security_functions.php';
 
 check_logged_out();
 
@@ -37,7 +37,7 @@ if (isset($_POST['signupsubmit'])) {
 
 
 
-    require '../../assets/setup/db.inc.php';
+    require __DIR__ . '/../../assets/setup/db.inc.php';
     
     //filter POST data
     function input_filter($data) {
@@ -93,60 +93,6 @@ if (isset($_POST['signupsubmit'])) {
             exit();
         }
 
-        /*
-        * -------------------------------------------------------------------------------
-        *   Image Upload
-        * -------------------------------------------------------------------------------
-        */
-
-        $FileNameNew = '_defaultUser.png';
-        $file = $_FILES['avatar'];
-
-        if (!empty($_FILES['avatar']['name'])){
-
-            $fileName = $_FILES['avatar']['name'];
-            $fileTmpName = $_FILES['avatar']['tmp_name'];
-            $fileSize = $_FILES['avatar']['size'];
-            $fileError = $_FILES['avatar']['error'];
-            $fileType = $_FILES['avatar']['type']; 
-
-            $fileExt = explode('.', $fileName);
-            $fileActualExt = strtolower(end($fileExt));
-
-            $allowed = array('jpg', 'jpeg', 'png', 'gif');
-            if (in_array($fileActualExt, $allowed)){
-
-                if ($fileError === 0){
-
-                    if ($fileSize < 10000000){
-
-                        $FileNameNew = uniqid('', true) . "." . $fileActualExt;
-                        $fileDestination = '../../assets/uploads/users/' . $FileNameNew;
-                        move_uploaded_file($fileTmpName, $fileDestination);
-
-                    }
-                    else {
-
-                        $_SESSION['ERRORS']['imageerror'] = 'image size should be less than 10MB';
-                        header("Location: ../");
-                        exit(); 
-                    }
-                }
-                else {
-
-                    $_SESSION['ERRORS']['imageerror'] = 'image upload failed, try again';
-                    header("Location: ../");
-                    exit();
-                }
-            }
-            else {
-
-                $_SESSION['ERRORS']['imageerror'] = 'invalid image type, try again';
-                header("Location: ../");
-                exit();
-            }
-        }
-
 
         /*
         * -------------------------------------------------------------------------------
@@ -181,7 +127,7 @@ if (isset($_POST['signupsubmit'])) {
             require 'sendverificationemail.inc.php';
 
             $_SESSION['STATUS']['loginstatus'] = 'Account Created, please Login';
-            header("Location: login.php");
+            header("Location: ../../login.php");
             exit();
         }
     }

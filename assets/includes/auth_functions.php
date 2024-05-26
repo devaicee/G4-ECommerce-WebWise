@@ -70,7 +70,7 @@ function check_verified() {
 
 function force_login($email) {
 
-    require '../assets/setup/db.inc.php';
+    require __DIR__ . '/../setup/db.inc.php';
     
     $sql = "SELECT * FROM users WHERE email=?;";
     $stmt = mysqli_stmt_init($conn);

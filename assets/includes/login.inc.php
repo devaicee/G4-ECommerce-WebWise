@@ -10,7 +10,7 @@ check_logged_out();
 
 if (!isset($_POST['loginsubmit'])){
 
-    header("Location: index.php");
+    header("Location: ../../index.php");
     exit();
 }
 else {
@@ -191,7 +191,7 @@ else {
                         }
                     }
 
-                    header("Location: /index.php");
+                    header("Location: ../../index.php");
                     exit();
                 } 
             } 

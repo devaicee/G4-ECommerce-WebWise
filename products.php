@@ -72,7 +72,7 @@ include 'assets/layouts/header.php';
               <img src="ProdImg/p1.png" alt="product">
               <span>Ocean</span>
             </div>
-          <div class="product-cell category"><span class="cell-label">Category:</span>Digital Products</div>
+          <div class="product-cell category"><span class="cell-label">Category:</span>Digital Product</div>
           <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
           <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
           <div class="product-cell price"><span class="cell-label">Price:</span>$560</div>
@@ -85,7 +85,7 @@ include 'assets/layouts/header.php';
               <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8a2l0Y2hlbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="product">
               <span>Lou</span>
             </div>
-            <div class="product-cell category"><span class="cell-label">Category:</span>Physical Products</div>
+            <div class="product-cell category"><span class="cell-label">Category:</span>Physical Product</div>
             <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
           <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
           <div class="product-cell price"><span class="cell-label">Price:</span>$560</div>
@@ -111,7 +111,7 @@ include 'assets/layouts/header.php';
               <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YmVkcm9vbXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="product">
               <span>Dreamy</span>
             </div>
-            <div class="product-cell category"><span class="cell-label">Category:</span>Digital Products</div>
+            <div class="product-cell category"><span class="cell-label">Category:</span>Digital Product</div>
             <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
           <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
           <div class="product-cell price"><span class="cell-label">Price:</span>$560</div>
@@ -124,7 +124,7 @@ include 'assets/layouts/header.php';
               <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aW50ZXJpb3J8ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="product">
               <span>Boheme</span>
             </div>
-            <div class="product-cell category"><span class="cell-label">Category:</span>Physical Products</div>
+            <div class="product-cell category"><span class="cell-label">Category:</span>Physical Product</div>
             <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
           <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
           <div class="product-cell price"><span class="cell-label">Price:</span>$560</div>
@@ -150,7 +150,7 @@ include 'assets/layouts/header.php';
               <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGludGVyaW9yfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="product">
               <span>Midnight</span>
             </div>
-            <div class="product-cell category"><span class="cell-label">Category:</span>Digital Products</div>
+            <div class="product-cell category"><span class="cell-label">Category:</span>Digital Product</div>
             <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
           <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
           <div class="product-cell price"><span class="cell-label">Price:</span>$560</div>

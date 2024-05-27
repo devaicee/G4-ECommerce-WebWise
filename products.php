@@ -67,7 +67,7 @@ include 'assets/layouts/header.php';
             </button></div>
         </div>
         <div class="products-row">
-            <a href="index.php" class="cell-more-button">
+            <a href="details.php" class="cell-more-button">
               <span class="button-text">View Details</span>
             </a>
             <div class="product-cell image">
@@ -79,7 +79,7 @@ include 'assets/layouts/header.php';
           <div class="product-cell price"><span class="cell-label">Price:</span>$560</div>
         </div>
         <div class="products-row">
-            <a href="index.php" class="cell-more-button">
+            <a href="details.php" class="cell-more-button">
               <span class="button-text">View Details</span>
             </a>
             <div class="product-cell image">
@@ -91,7 +91,7 @@ include 'assets/layouts/header.php';
           <div class="product-cell price"><span class="cell-label">Price:</span>$560</div>
         </div>
         <div class="products-row">
-            <a href="index.php" class="cell-more-button">
+            <a href="details.php" class="cell-more-button">
               <span class="button-text">View Details</span>
             </a>
             <div class="product-cell image">
@@ -103,7 +103,7 @@ include 'assets/layouts/header.php';
           <div class="product-cell price"><span class="cell-label">Price:</span>$560</div>
         </div>
         <div class="products-row">
-            <a href="index.php" class="cell-more-button">
+            <a href="details.php" class="cell-more-button">
               <span class="button-text">View Details</span>
             </a>
             <div class="product-cell image">
@@ -115,7 +115,7 @@ include 'assets/layouts/header.php';
           <div class="product-cell price"><span class="cell-label">Price:</span>$560</div>
         </div>
         <div class="products-row">
-            <a href="index.php" class="cell-more-button">
+            <a href="details.php" class="cell-more-button">
               <span class="button-text">View Details</span>
             </a>
             <div class="product-cell image">
@@ -127,7 +127,7 @@ include 'assets/layouts/header.php';
           <div class="product-cell price"><span class="cell-label">Price:</span>$560</div>
         </div>
         <div class="products-row">
-            <a href="index.php" class="cell-more-button">
+            <a href="details.php" class="cell-more-button">
               <span class="button-text">View Details</span>
             </a>
             <div class="product-cell image">
@@ -139,7 +139,7 @@ include 'assets/layouts/header.php';
           <div class="product-cell price"><span class="cell-label">Price:</span>$560</div>
         </div>
         <div class="products-row">
-            <a href="index.php" class="cell-more-button">
+            <a href="details.php" class="cell-more-button">
               <span class="button-text">View Details</span>
             </a>
             <div class="product-cell image">
@@ -151,7 +151,7 @@ include 'assets/layouts/header.php';
           <div class="product-cell price"><span class="cell-label">Price:</span>$560</div>
         </div>
         <div class="products-row">
-            <a href="index.php" class="cell-more-button">
+            <a href="details.php" class="cell-more-button">
               <span class="button-text">View Details</span>
             </a>
             <div class="product-cell image">

@@ -10,6 +10,31 @@ $(document).ready(function() {
       });
   });
 
+   // Search form submit event
+   $('#search-form').submit(function(event) {
+    event.preventDefault();
+    var searchText = $('#search_input').val().toLowerCase();
+    $('.products-row').each(function() {
+      var matchesSearch = $(this).text().toLowerCase().includes(searchText);
+      if (matchesSearch) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
+  });
+
+  // Close search event
+  $('#close_search').click(function() {
+    $('#search_input').val('');
+    $('.products-row').show(); // Show all products
+  });
+
+  // Toggle filter menu
+  document.querySelector(".jsFilter").addEventListener("click", function () {
+    document.querySelector(".filter-menu").classList.toggle("active");
+  });
+
   // Existing JavaScript code
   document.querySelector(".jsFilter").addEventListener("click", function () {
     document.querySelector(".filter-menu").classList.toggle("active");

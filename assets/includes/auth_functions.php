@@ -126,7 +126,7 @@ function check_remember_me() {
 
     
 
-    require 'assets/setup/db.inc.php';
+    require __DIR__ . '/../setup/db.inc.php';
     
     if (empty($_SESSION['auth']) && !empty($_COOKIE['rememberme'])) {
         

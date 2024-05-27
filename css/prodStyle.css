@@ -175,6 +175,8 @@
 
 .filter-button-wrapper {
   position: relative;
+  margin-right: 60px;
+  width: 30px;
 }
 
 .filter-menu {

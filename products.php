@@ -1,6 +1,29 @@
 <?php
+
 define('TITLE', "Login");
 include 'assets/layouts/header.php';
+
+// Sample products array (this would typically come from a database)
+$products = [
+    ['name' => 'Ocean', 'category' => 'Digital Product', 'creator' => 'Arshane Lee', 'sales' => 11, 'price' => 560, 'image' => 'ProdImg/p1.png'],
+    ['name' => 'Lou', 'category' => 'Physical Product', 'creator' => 'Arshane Lee', 'sales' => 11, 'price' => 560, 'image' => 'https://images.unsplash.com/photo-1484154218962-a197022b5858'],
+    ['name' => 'Yellow', 'category' => 'Made with WebWise', 'creator' => 'Arshane Lee', 'sales' => 11, 'price' => 560, 'image' => 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7'],
+    // Add more products as needed
+];
+
+// Filter products based on search query
+$searchQuery = isset($_GET['search']) ? trim($_GET['search']) : '';
+$filteredProducts = [];
+
+if ($searchQuery) {
+    foreach ($products as $product) {
+        if (stripos($product['name'], $searchQuery) !== false || stripos($product['category'], $searchQuery) !== false || stripos($product['creator'], $searchQuery) !== false) {
+            $filteredProducts[] = $product;
+        }
+    }
+} else {
+    $filteredProducts = $products;
+}
 
 ?>
 
@@ -23,7 +46,10 @@ include 'assets/layouts/header.php';
 <div class="app-container">
     <div class="app-content">
       <div class="app-content-actions">
-        <input class="search-bar" placeholder="Search..." type="text">
+      <form method="GET" action="">
+        <input class="search-bar" name="search" placeholder="Search..." type="text">
+        <button type="submit">Search</button>
+      </form>
         <div class="app-content-actions-wrapper">
           <div class="filter-button-wrapper">
             <button class="action-button filter jsFilter"><span>Filter</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-filter"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg></button>
@@ -63,146 +89,114 @@ include 'assets/layouts/header.php';
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512"><path fill="currentColor" d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z"/></svg>
             </button></div>
         </div>
+
+        <?php if ($filteredProducts): ?>
+            <?php foreach ($filteredProducts as $product): ?>
+
         <div class="products-row digital-products">
-    <a href="details.php?image=Graduation%20Template.png&product_name=Graduation%20Template&category=Digital%20Product&creator=Arshane%20Lee&price=150" class="cell-more-button">
-        <span class="button-text">View Details</span>
-    </a>
-    <div class="product-cell image">
-        <img src="img/ProdImg/Graduation Template.png" alt="product">
-        <span>Graduation Template</span>
-    </div>
-    <div class="product-cell category"><span class="cell-label">Category:</span>Digital Product</div>
-    <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
-    <div class="product-cell sales"><span class="cell-label">Sales:</span>30</div>
-    <div class="product-cell price"><span class="cell-label">Price:</span>₱150</div>
-</div>
-
-<div class="products-row physical-products">
-    <a href="details.php?image=TikVideo.app_7358812542086515974_6.jpeg&product_name=Key%20Chain%20(Mushroom)&category=Physical%20Product&creator=Baby%20Lyka%20Cinco&price=70" class="cell-more-button">
-        <span class="button-text">View Details</span>
-    </a>
-    <div class="product-cell image">
-        <img src="img/ProdImg/TikVideo.app_7358812542086515974_6.jpeg" alt="product">
-        <span>Key Chain (Mushroom)</span>
-    </div>
-    <div class="product-cell category"><span class="cell-label">Category:</span>Physical Product</div>
-    <div class="product-cell creator"><span class="cell-label">Creator:</span>Baby Lyka Cinco</div>
-    <div class="product-cell sales"><span class="cell-label">Sales:</span>50</div>
-    <div class="product-cell price"><span class="cell-label">Price:</span>₱70</div>
-</div>
-
-<div class="products-row webwise-products">
-    <a href="details.php?image=New%20Project%2013%20%5B94EA189%5D.png&product_name=White%20Tshirt&category=Made%20with%20WebWise&creator=Renz%20Castro&price=159" class="cell-more-button">
-        <span class="button-text">View Details</span>
-    </a>
-    <div class="product-cell image">
-        <img src="img/ProdImg/New Project 13 [94EA189].png" alt="product">
-        <span>White Tshirt</span>
-    </div>
-    <div class="product-cell category"><span class="cell-label">Category:</span>Made with WebWise</div>
-    <div class="product-cell creator"><span class="cell-label">Creator:</span>Renz Castro</div>
-    <div class="product-cell sales"><span class="cell-label">Sales:</span>25</div>
-    <div class="product-cell price"><span class="cell-label">Price:</span>₱159</div>
-</div>
-
-<div class="products-row digital-products">
-    <a href="details.php?image=p5.png&product_name=Java%20Online%20Course&category=Digital%20Product&creator=Arman%20James%20S.%20Dela%20Peña&price=399" class="cell-more-button">
-        <span class="button-text">View Details</span>
-    </a>
-    <div class="product-cell image">
-        <img src="img/ProdImg/p5.png" alt="product">
-        <span>Java Online Course</span>
-    </div>
-    <div class="product-cell category"><span class="cell-label">Category:</span>Digital Product</div>
-    <div class="product-cell creator"><span class="cell-label">Creator:</span>Arman James S. Dela Peña</div>
-    <div class="product-cell sales"><span class="cell-label">Sales:</span>19</div>
-    <div class="product-cell price"><span class="cell-label">Price:</span>₱399</div>
-</div>
-
-<div class="products-row physical-products">
-    <a href="details.php?image=TikVideo.app_7358812542086515974_1.jpeg&product_name=Key%20Chain%20(Octopus)&category=Physical%20Product&creator=Christine%20Tuga-on&price=50" class="cell-more-button">
-        <span class="button-text">View Details</span>
-    </a>
-    <div class="product-cell image">
-        <img src="img/ProdImg/TikVideo.app_7358812542086515974_1.jpeg" alt="product">
-        <span>Key Chain (Octopus)</span>
-    </div>
-    <div class="product-cell category"><span class="cell-label">Category:</span>Physical Product</div>
-    <div class="product-cell creator"><span class="cell-label">Creator:</span>Christine Tuga-on</div>
-    <div class="product-cell sales"><span class="cell-label">Sales:</span>31</div>
-    <div class="product-cell price"><span class="cell-label">Price:</span>₱50</div>
-</div>
-
-<div class="products-row webwise-products">
-    <a href="details.php?image=New%20Project%2013%20%5BC340707%5D.png&product_name=Black%20Tshirt&category=Made%20with%20WebWise&creator=Renz%20Castro&price=250" class="cell-more-button">
-        <span class="button-text">View Details</span>
-    </a>
-    <div class="product-cell image">
-        <img src="img/ProdImg/New Project 13 [C340707].png" alt="product">
-        <span>Black Tshirt</span>
-    </div>
-    <div class="product-cell category"><span class="cell-label">Category:</span>Made with WebWise</div>
-    <div class="product-cell creator"><span class="cell-label">Creator:</span>Renz Castro</div>
-    <div class="product-cell sales"><span class="cell-label">Sales:</span>13</div>
-    <div class="product-cell price"><span class="cell-label">Price:</span>₱250</div>
-</div>
-
-<div class="products-row digital-products">
-    <a href="details.php?image=New%20Project%2016%20%5BB84CC55%5D.png&product_name=C++%20Online%20Course&category=Digital%20Product&creator=Arman%20James%20Dela%20Peña&price=299" class="cell-more-button">
-        <span class="button-text">View Details</span>
-    </a>
-    <div class="product-cell image">
-        <img src="img/ProdImg/New Project 16 [B84CC55].png" alt="product">
-        <span>C++ Online Course</span>
-    </div>
-    <div class="product-cell category"><span class="cell-label">Category:</span>Digital Product</div>
-    <div class="product-cell creator"><span class="cell-label">Creator:</span>Arman James Dela Peña</div>
-    <div class="product-cell sales"><span class="cell-label">Sales:</span>15</div>
-    <div class="product-cell price"><span class="cell-label">Price:</span>₱299</div>
-</div>
-
-<div class="products-row physical-products">
-    <a href="details.php?image=TikVideo.app_7358812542086515974_5.jpeg&product_name=Key%20Chain%20(Frog)&category=Physical%20Products&creator=Baby%20Lyka%20Cinco&price=70" class="cell-more-button">
-        <span class="button-text">View Details</span>
-    </a>
-    <div class="product-cell image">
-        <img src="img/ProdImg/TikVideo.app_7358812542086515974_5.jpeg" alt="product">
-        <span>Key Chain (Frog)</span>
-    </div>
-    <div class="product-cell category"><span class="cell-label">Category:</span>Physical Products</div>
-    <div class="product-cell creator"><span class="cell-label">Creator:</span>Baby Lyka Cinco</div>
-    <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
-    <div class="product-cell price"><span class="cell-label">Price:</span>₱70</div>
-</div>
-
-<div class="products-row physical-products">
-    <a href="details.php?image=p16.png&product_name=Tumbler&category=Made%20with%20WebWise&creator=Christine%20Tuga-on&price=100" class="cell-more-button">
-        <span class="button-text">View Details</span>
-    </a>
-    <div class="product-cell image">
-        <img src="img/ProdImg/p16.png" alt="product">
-        <span>Tumbler</span>
-    </div>
-    <div class="product-cell category"><span class="cell-label">Category:</span>Made with WebWise</div>
-    <div class="product-cell creator"><span class="cell-label">Creator:</span>Christine Tuga-on</div>
-    <div class="product-cell sales"><span class="cell-label">Sales:</span>25</div>
-    <div class="product-cell price"><span class="cell-label">Price:</span>₱100</div>
-</div>
-
-<div class="products-row digital-products">
-    <a href="details.php?image=p4.png&product_name=SQL%20Online%20Course&category=Digital%20Product&creator=Arman%20James%20Dela%20Peña&price=250" class="cell-more-button">
-        <span class="button-text">View Details</span>
-    </a>
-    <div class="product-cell image">
-        <img src="img/ProdImg/p4.png" alt="product">
-        <span>SQL Online Course</span>
-    </div>
-    <div class="product-cell category"><span class="cell-label">Category:</span>Digital Product</div>
-    <div class="product-cell creator"><span class="cell-label">Creator:</span>Arman James Dela Peña</div>
-    <div class="product-cell sales"><span class="cell-label">Sales:</span>7</div>
-    <div class="product-cell price"><span class="cell-label">Price:</span>₱250</div>
-</div>
-
+            <a href="details.php" class="cell-more-button">
+              <span class="button-text">View Details</span>
+            </a>
+            <div class="product-cell image">
+              <img src="ProdImg/p1.png" alt="product">
+              <span>Ocean</span>
+            </div>
+          <div class="product-cell category"><span class="cell-label">Category:</span>Digital Product</div>
+          <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
+          <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
+          <div class="product-cell price"><span class="cell-label">Price:</span>$560</div>
+        </div>
+        <div class="products-row physical-products">
+            <a href="details.php" class="cell-more-button">
+              <span class="button-text">View Details</span>
+            </a>
+            <div class="product-cell image">
+              <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8a2l0Y2hlbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="product">
+              <span>Lou</span>
+            </div>
+            <div class="product-cell category"><span class="cell-label">Category:</span>Physical Product</div>
+            <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
+          <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
+          <div class="product-cell price"><span class="cell-label">Price:</span>$560</div>
+        </div>
+        <div class="products-row webwise-products">
+            <a href="details.php" class="cell-more-button">
+              <span class="button-text">View Details</span>
+            </a>
+            <div class="product-cell image">
+              <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60" alt="product">
+              <span>Yellow</span>
+            </div>
+            <div class="product-cell category"><span class="cell-label">Category:</span>Made with WebWise</div>
+            <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
+          <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
+          <div class="product-cell price"><span class="cell-label">Price:</span>$560</div>
+        </div>
+        <div class="products-row digital-products">
+            <a href="details.php" class="cell-more-button">
+              <span class="button-text">View Details</span>
+            </a>
+            <div class="product-cell image">
+              <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YmVkcm9vbXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="product">
+              <span>Dreamy</span>
+            </div>
+            <div class="product-cell category"><span class="cell-label">Category:</span>Digital Product</div>
+            <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
+          <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
+          <div class="product-cell price"><span class="cell-label">Price:</span>$560</div>
+        </div>
+        <div class="products-row physical-products">
+            <a href="details.php" class="cell-more-button">
+              <span class="button-text">View Details</span>
+            </a>
+            <div class="product-cell image">
+              <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aW50ZXJpb3J8ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="product">
+              <span>Boheme</span>
+            </div>
+            <div class="product-cell category"><span class="cell-label">Category:</span>Physical Product</div>
+            <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
+          <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
+          <div class="product-cell price"><span class="cell-label">Price:</span>$560</div>
+        </div>
+        <div class="products-row webwise-products">
+            <a href="details.php" class="cell-more-button">
+              <span class="button-text">View Details</span>
+            </a>
+            <div class="product-cell image">
+              <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGludGVyaW9yfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="product">
+              <span>Sky</span>
+            </div>
+            <div class="product-cell category"><span class="cell-label">Category:</span>Made with WebWise</div>
+            <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
+          <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
+          <div class="product-cell price"><span class="cell-label">Price:</span>$560</div>
+        </div>
+        <div class="products-row digital-products">
+            <a href="details.php" class="cell-more-button">
+              <span class="button-text">View Details</span>
+            </a>
+            <div class="product-cell image">
+              <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGludGVyaW9yfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="product">
+              <span>Midnight</span>
+            </div>
+            <div class="product-cell category"><span class="cell-label">Category:</span>Digital Product</div>
+            <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
+          <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
+          <div class="product-cell price"><span class="cell-label">Price:</span>$560</div>
+        </div>
+        <div class="products-row physical-products">
+            <a href="details.php" class="cell-more-button">
+              <span class="button-text">View Details</span>
+            </a>
+            <div class="product-cell image">
+              <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aW50ZXJpb3J8ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="product">
+              <span>Boheme</span>
+            </div>
+            <div class="product-cell category"><span class="cell-label">Category:</span>Physical Products</div>
+            <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
+          <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
+          <div class="product-cell price"><span class="cell-label">Price:</span>$560</div>
+        </div>
       </div>
     </div>
   </div>

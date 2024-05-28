@@ -1,5 +1,10 @@
 <?php
 
+$image = $_GET['image'];
+$product_name = $_GET['product_name'];
+$category = $_GET['category'];
+$creator = $_GET['creator'];
+$price = $_GET['price'];
 define('TITLE', "Login");
 include 'assets/layouts/header.php';
 
@@ -23,52 +28,48 @@ include 'assets/layouts/header.php';
 	</section>
 	<!-- End Banner Area -->
 
-	<!--================Single Product Area =================-->
-	<div class="product_image_area">
-		<div class="container">
-			<div class="row s_product_inner">
-				<div class="col-lg-6">
-					<div class="s_Product_carousel">
-						<div class="single-prd-item">
-							<img class="img-fluid" src="img/category/s-p1.jpg" alt="">
-						</div>
-						<div class="single-prd-item">
-							<img class="img-fluid" src="img/category/s-p1.jpg" alt="">
-						</div>
-						<div class="single-prd-item">
-							<img class="img-fluid" src="img/category/s-p1.jpg" alt="">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-5 offset-lg-1">
-					<div class="s_product_text">
-						<h3>Faded SkyBlu Denim Jeans</h3>
-						<h2>$149.99</h2>
-						<ul class="list">
-							<li><a class="active" href="#"><span>Category</span> : Household</a></li>
-							<li><a href="#"><span>Availibility</span> : In Stock</a></li>
-						</ul>
-						<p>Mill Oil is an innovative oil filled radiator with the most modern technology. If you are looking for
-							something that can make your interior look awesome, and at the same time give you the pleasant warm feeling
-							during the winter.</p>
-						<div class="product_count">
-							<label for="qty">Quantity:</label>
-							<input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
-							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-							 class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-							 class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
-						</div>
-						<div class="card_area d-flex align-items-center">
-							<a class="primary-btn" href="#">Add to Cart</a>
-							<a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
-							<a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<!--================Single Product Area =================-->
+<div class="product_image_area">
+    <div class="container">
+        <div class="row s_product_inner">
+            <div class="col-lg-6">
+                <div class="s_Product_carousel">
+                    <div class="single-prd-item">
+                        <img class="img-fluid" src="img/ProdImg/<?php echo htmlspecialchars($image); ?>" alt="">
+                    </div>
+                    <div class="single-prd-item">
+                        <img class="img-fluid" src="img/ProdImg/<?php echo htmlspecialchars($image); ?>" alt="">
+                    </div>
+                    <div class="single-prd-item">
+                        <img class="img-fluid" src="img/ProdImg/<?php echo htmlspecialchars($image); ?>" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 offset-lg-1">
+                <div class="s_product_text">
+                    <h3><?php echo htmlspecialchars($product_name); ?></h3>
+                    <h2>₱<?php echo htmlspecialchars($price); ?></h2>
+                    <ul class="list">
+                        <li><a class="active" href="#"><span>Category</span> : <?php echo htmlspecialchars($category); ?></a></li>
+                        <li><a href="#"><span>Creator</span> : <?php echo htmlspecialchars($creator); ?></a></li>
+                    </ul>
+                    <p>Product description can go here. This is a placeholder for the product details.</p>
+                    <div class="product_count">
+                        <label for="qty">Quantity:</label>
+                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
+                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;" class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;" class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+                    </div>
+                    <div class="card_area d-flex align-items-center">
+                        <a class="primary-btn" href="cart.php">Add to Cart</a>
+                        <a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
+                        <a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 	<!--================End Single Product Area =================-->
 
 	<!--================Product Description Area =================-->
@@ -397,6 +398,8 @@ include 'assets/layouts/header.php';
 	<!--================End Product Description Area =================-->
 
 
+	<
 <?php
 include 'assets/layouts/footer.php';
+include 'js/prods.js';
 ?>

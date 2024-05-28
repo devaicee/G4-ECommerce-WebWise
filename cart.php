@@ -12,8 +12,8 @@ include 'assets/layouts/header.php';
                 <div class="col-first">
                     <h1>Shopping Cart</h1>
                     <nav class="d-flex align-items-center">
-                        <a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
-                        <a href="category.html">Cart</a>
+                        <a href="index.php">Home<span class="lnr lnr-arrow-right"></span></a>
+                        <a href="category.php">Cart</a>
                     </nav>
                 </div>
             </div>
@@ -107,8 +107,8 @@ include 'assets/layouts/header.php';
                                 </td>
                                 <td>
                                     <div class="checkout_btn_inner d-flex align-items-center">
-                                        <a class="gray_btn" href="index.html">Continue Shopping</a	>
-                                        <a class="primary-btn" href="checkout.html">Proceed to checkout</a>
+                                        <a class="gray_btn" href="index.php">Continue Shopping</a	>
+                                        <a class="primary-btn" href="checkout.php">Proceed to checkout</a>
                                     </div>
                                 </td>
                             </tr>

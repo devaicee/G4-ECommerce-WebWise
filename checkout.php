@@ -12,8 +12,8 @@ include 'assets/layouts/header.php';
                 <div class="col-first">
                     <h1>Checkout</h1>
                     <nav class="d-flex align-items-center">
-                        <a href="index.html">Home<span class="lnr lnr-arrow-right"></span></a>
-                        <a href="single-product.html">Checkout</a>
+                        <a href="index.php">Home<span class="lnr lnr-arrow-right"></span></a>
+                        <a href="single-product.php">Checkout</a>
                     </nav>
                 </div>
             </div>
@@ -154,7 +154,7 @@ include 'assets/layouts/header.php';
                                 <label for="f-option4">I’ve read and accept the </label>
                                 <a href="#">terms & conditions*</a>
                             </div>
-                            <a class="primary-btn" href="confirmation.html">Confirm</a>
+                            <a class="primary-btn" href="confirmation.php">Confirm</a>
                         </div>
                     </div>
                 </div>

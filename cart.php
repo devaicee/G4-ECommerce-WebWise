@@ -1,127 +1,92 @@
 <?php
-
+session_start();
 define('TITLE', "Cart");
 include 'assets/layouts/header.php';
 
-?>
+// Handle add to cart action
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_to_cart'])) {
+    $product_id = $_POST['product_id'];
+    $product_name = $_POST['product_name'];
+    $price = $_POST['price'];
+    $quantity = $_POST['qty'];
 
-    <!-- Start Banner Area -->
+    // Initialize the cart if it's not set
+    if (!isset($_SESSION['cart'])) {
+        $_SESSION['cart'] = [];
+    }
+
+    // Add the product to the cart
+    $_SESSION['cart'][] = [
+        'product_id' => $product_id,
+        'name' => $product_name,
+        'price' => $price,
+        'quantity' => $quantity
+    ];
+
+    header('Location: cart.php');
+    exit();
+}
+
+// Handle remove from cart action
+if (isset($_GET['action']) && $_GET['action'] == 'remove' && isset($_GET['id'])) {
+    $id = $_GET['id'];
+    unset($_SESSION['cart'][$id]);
+    $_SESSION['cart'] = array_values($_SESSION['cart']); // Reindex the array
+    header('Location: cart.php');
+    exit();
+}
+
+if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
+    $total_price = 0;
+    ?>
     <section class="banner-area organic-breadcrumb">
-        <div class="container">
-            <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
-                <div class="col-first">
-                    <h1>Shopping Cart</h1>
-                    <nav class="d-flex align-items-center">
-                        <a href="index.php">Home<span class="lnr lnr-arrow-right"></span></a>
-                        <a href="category.php">Cart</a>
-                    </nav>
-                </div>
-            </div>
-        </div>
+        <!-- Your banner area HTML code -->
     </section>
-    <!-- End Banner Area -->
-
-    <!--================Cart Area =================-->
     <section class="cart_area">
         <div class="container">
             <div class="cart_inner">
                 <div class="table-responsive">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Product</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Quantity</th>
-                                <th scope="col">Total</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            <tr class="bottom_button">
-                                <td>
-                                    <a class="gray_btn" href="#">Update Cart</a>
-                                </td>
-                                <td>
-
-                                </td>
-                                <td>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-
-                                </td>
-                                <td>
-
-                                </td>
-                                <td>
-                                    <h5>Subtotal</h5>
-                                </td>
-                                <td>
-                                    <h5>.00</h5>
-                                </td>
-                            </tr>
-                            <tr class="shipping_area">
-                                <td>
-
-                                </td>
-                                <td>
-
-                                </td>
-                                <td>
-                                    <h5>Shipping</h5>
-                                </td>
-                                <td>
-                                    <div class="shipping_box">
-                                        <ul class="list">
-                                            <li><a href="#">Rate: 00</a></li>
-                                            <li><a href="#">Free Shipping</a></li>
-                                            <li><a href="#">Rate: 00</a></li>
-                                            <li class="active"><a href="#">Local Delivery: 00</a></li>
-                                        </ul>
-                                        <h6>Calculate Shipping <i class="fa fa-caret-down" aria-hidden="true"></i></h6>
-                                        <select class="shipping_select">
-                                            <option value="1">Cebu</option>
-                                            <option value="2">Manila</option>
-                                            <option value="4">Surigao</option>
-                                        </select>
-                                        <select class="shipping_select">
-                                            <option value="1">Select a State</option>
-                                            <option value="2">Select a State</option>
-                                            <option value="4">Select a State</option>
-                                        </select>
-                                        <input type="text" placeholder="Postcode/Zipcode">
-                                        <a class="gray_btn" href="#">Update Details</a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="out_button_area">
-                                <td>
-
-                                </td>
-                                <td>
-
-                                </td>
-                                <td>
-
-                                </td>
-                                <td>
-                                    <div class="checkout_btn_inner d-flex align-items-center">
-                                        <a class="gray_btn" href="index.php">Continue Shopping</a	>
-                                        <a class="primary-btn" href="checkout.php">Proceed to checkout</a>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <form action="cart.php" method="post">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Product</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($_SESSION['cart'] as $id => $product): ?>
+                                    <tr>
+                                        <td><?php echo htmlspecialchars($product['name']); ?></td>
+                                        <td>₱<?php echo htmlspecialchars($product['price']); ?></td>
+                                        <td>
+                                            <?php echo htmlspecialchars($product['quantity']); ?>
+                                        </td>
+                                        <td>₱<?php echo htmlspecialchars($product['price'] * $product['quantity']); ?></td>
+                                    </tr>
+                                    <?php $total_price += $product['price'] * $product['quantity']; ?>
+                                <?php endforeach; ?>
+                                <tr>
+                                    <td colspan="3"><h5>Subtotal</h5></td>
+                                    <td colspan="2"><h5>₱<?php echo htmlspecialchars($total_price); ?></h5></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
-    <!--================End Cart Area =================-->
+    <?php
+} else {
+    ?>
+    <div class="container">
+        <p>Your cart is empty.</p>
+    </div>
+    <?php
+}
 
-<?php
-
-include 'assets/layouts/footer.php'
-
+include 'assets/layouts/footer.php';
 ?>

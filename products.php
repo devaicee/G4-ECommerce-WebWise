@@ -66,122 +66,132 @@ include 'assets/layouts/header.php';
             </button></div>
         </div>
         <div class="products-row digital-products">
-            <a href="details.php" class="cell-more-button">
-              <span class="button-text">View Details</span>
-            </a>
-            <div class="product-cell image">
-              <img src="img/ProdImg/Graduation Template.png" alt="product">
-              <span>Graduation Template</span>
-            </div>
-          <div class="product-cell category"><span class="cell-label">Category:</span>Digital Product</div>
-          <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
-          <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
-          <div class="product-cell price"><span class="cell-label">Price:</span>₱150</div>
-        </div>
-        <div class="products-row physical-products">
-            <a href="details.php" class="cell-more-button">
-              <span class="button-text">View Details</span>
-            </a>
-            <div class="product-cell image">
-              <img src="img/ProdImg/TikVideo.app_7358812542086515974_6.jpeg" alt="product">
-              <span>Key Chain (Mushroom)</span>
-            </div>
-            <div class="product-cell category"><span class="cell-label">Category:</span>Physical Product</div>
-            <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
-            <div class="product-cell price"><span class="cell-label">Price:</span>₱70</div>
-          <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
-        </div>
-        <div class="products-row webwise-products">
-            <a href="details.php" class="cell-more-button">
-              <span class="button-text">View Details</span>
-            </a>
-            <div class="product-cell image">
-              <img src="img/ProdImg/New Project 13 [94EA189].png" alt="product">
-              <span>White Tshirt</span>
-            </div>
-            <div class="product-cell category"><span class="cell-label">Category:</span>Made with WebWise</div>
-            <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
-          <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
-          <div class="product-cell price"><span class="cell-label">Price:</span>₱159</div>
-        </div>
-        <div class="products-row digital-products">
-            <a href="details.php" class="cell-more-button">
-              <span class="button-text">View Details</span>
-            </a>
-            <div class="product-cell image">
-              <img src="img/ProdImg/p5.png" alt="product">
-              <span>Java Online Course</span>
-            </div>
-            <div class="product-cell category"><span class="cell-label">Category:</span>Digital Product</div>
-            <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
-          <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
-          <div class="product-cell price"><span class="cell-label">Price:</span>₱399</div>
-        </div>
-        <div class="products-row physical-products">
-            <a href="details.php" class="cell-more-button">
-              <span class="button-text">View Details</span>
-            </a>
-            <div class="product-cell image">
-              <img src="img/ProdImg/TikVideo.app_7358812542086515974_1.jpeg" alt="product">
-              <span>Key Chain (Octopus)</span>
-            </div>
-            <div class="product-cell category"><span class="cell-label">Category:</span>Physical Product</div>
-            <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
-          <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
-          <div class="product-cell price"><span class="cell-label">Price:</span>₱50</div>
-        </div>
-        <div class="products-row webwise-products">
-            <a href="details.php" class="cell-more-button">
-              <span class="button-text">View Details</span>
-            </a>
-            <div class="product-cell image">
-              <img src="img/ProdImg/New Project 13 [C340707].png" alt="product">
-              <span>Black Tshirt</span>
-            </div>
-            <div class="product-cell category"><span class="cell-label">Category:</span>Made with WebWise</div>
-            <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
-          <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
-          <div class="product-cell price"><span class="cell-label">Price:</span>₱250</div>
-        </div>
-        <div class="products-row digital-products">
-            <a href="details.php" class="cell-more-button">
-              <span class="button-text">View Details</span>
-            </a>
-            <div class="product-cell image">
-              <img src="img/ProdImg/New Project 16 [B84CC55].png" alt="product">
-              <span>C++ Online Course</span>
-            </div>
-            <div class="product-cell category"><span class="cell-label">Category:</span>Digital Product</div>
-            <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
-          <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
-          <div class="product-cell price"><span class="cell-label">Price:</span>₱299</div>
-        </div>
-        <div class="products-row physical-products">
-            <a href="details.php" class="cell-more-button">
-              <span class="button-text">View Details</span>
-            </a>
-            <div class="product-cell image">
-              <img src="img/ProdImg/TikVideo.app_7358812542086515974_5.jpeg" alt="product">
-              <span>Key Chain (Frog)</span>
-            </div>
-            <div class="product-cell category"><span class="cell-label">Category:</span>Physical Products</div>
-            <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
-          <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
-          <div class="product-cell price"><span class="cell-label">Price:</span>₱70</div>
-        </div>
-        <div class="products-row physical-products">
-            <a href="details.php" class="cell-more-button">
-              <span class="button-text">View Details</span>
-            </a>
-            <div class="product-cell image">
-              <img src="img/ProdImg/p16.png" alt="product">
-              <span>Tumbler</span>
-            </div>
-            <div class="product-cell category"><span class="cell-label">Category:</span>Physical Products</div>
-            <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
-          <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
-          <div class="product-cell price"><span class="cell-label">Price:</span>₱100</div>
-        </div>
+    <a href="details.php?image=Graduation%20Template.png&product_name=Graduation%20Template&category=Digital%20Product&creator=Arshane%20Lee&price=150" class="cell-more-button">
+        <span class="button-text">View Details</span>
+    </a>
+    <div class="product-cell image">
+        <img src="img/ProdImg/Graduation Template.png" alt="product">
+        <span>Graduation Template</span>
+    </div>
+    <div class="product-cell category"><span class="cell-label">Category:</span>Digital Product</div>
+    <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
+    <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
+    <div class="product-cell price"><span class="cell-label">Price:</span>₱150</div>
+</div>
+
+<div class="products-row physical-products">
+    <a href="details.php?image=TikVideo.app_7358812542086515974_6.jpeg&product_name=Key%20Chain%20(Mushroom)&category=Physical%20Product&creator=Arshane%20Lee&price=70" class="cell-more-button">
+        <span class="button-text">View Details</span>
+    </a>
+    <div class="product-cell image">
+        <img src="img/ProdImg/TikVideo.app_7358812542086515974_6.jpeg" alt="product">
+        <span>Key Chain (Mushroom)</span>
+    </div>
+    <div class="product-cell category"><span class="cell-label">Category:</span>Physical Product</div>
+    <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
+    <div class="product-cell price"><span class="cell-label">Price:</span>₱70</div>
+    <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
+</div>
+
+<div class="products-row webwise-products">
+    <a href="details.php?image=New%20Project%2013%20%5B94EA189%5D.png&product_name=White%20Tshirt&category=Made%20with%20WebWise&creator=Arshane%20Lee&price=159" class="cell-more-button">
+        <span class="button-text">View Details</span>
+    </a>
+    <div class="product-cell image">
+        <img src="img/ProdImg/New Project 13 [94EA189].png" alt="product">
+        <span>White Tshirt</span>
+    </div>
+    <div class="product-cell category"><span class="cell-label">Category:</span>Made with WebWise</div>
+    <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
+    <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
+    <div class="product-cell price"><span class="cell-label">Price:</span>₱159</div>
+</div>
+
+<div class="products-row digital-products">
+    <a href="details.php?image=p5.png&product_name=Java%20Online%20Course&category=Digital%20Product&creator=Arshane%20Lee&price=399" class="cell-more-button">
+        <span class="button-text">View Details</span>
+    </a>
+    <div class="product-cell image">
+        <img src="img/ProdImg/p5.png" alt="product">
+        <span>Java Online Course</span>
+    </div>
+    <div class="product-cell category"><span class="cell-label">Category:</span>Digital Product</div>
+    <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
+    <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
+    <div class="product-cell price"><span class="cell-label">Price:</span>₱399</div>
+</div>
+
+<div class="products-row physical-products">
+    <a href="details.php?image=TikVideo.app_7358812542086515974_1.jpeg&product_name=Key%20Chain%20(Octopus)&category=Physical%20Product&creator=Arshane%20Lee&price=50" class="cell-more-button">
+        <span class="button-text">View Details</span>
+    </a>
+    <div class="product-cell image">
+        <img src="img/ProdImg/TikVideo.app_7358812542086515974_1.jpeg" alt="product">
+        <span>Key Chain (Octopus)</span>
+    </div>
+    <div class="product-cell category"><span class="cell-label">Category:</span>Physical Product</div>
+    <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
+    <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
+    <div class="product-cell price"><span class="cell-label">Price:</span>₱50</div>
+</div>
+
+<div class="products-row webwise-products">
+    <a href="details.php?image=New%20Project%2013%20%5BC340707%5D.png&product_name=Black%20Tshirt&category=Made%20with%20WebWise&creator=Arshane%20Lee&price=250" class="cell-more-button">
+        <span class="button-text">View Details</span>
+    </a>
+    <div class="product-cell image">
+        <img src="img/ProdImg/New Project 13 [C340707].png" alt="product">
+        <span>Black Tshirt</span>
+    </div>
+    <div class="product-cell category"><span class="cell-label">Category:</span>Made with WebWise</div>
+    <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
+    <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
+    <div class="product-cell price"><span class="cell-label">Price:</span>₱250</div>
+</div>
+
+<div class="products-row digital-products">
+    <a href="details.php?image=New%20Project%2016%20%5BB84CC55%5D.png&product_name=C++%20Online%20Course&category=Digital%20Product&creator=Arshane%20Lee&price=299" class="cell-more-button">
+        <span class="button-text">View Details</span>
+    </a>
+    <div class="product-cell image">
+        <img src="img/ProdImg/New Project 16 [B84CC55].png" alt="product">
+        <span>C++ Online Course</span>
+    </div>
+    <div class="product-cell category"><span class="cell-label">Category:</span>Digital Product</div>
+    <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
+    <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
+    <div class="product-cell price"><span class="cell-label">Price:</span>₱299</div>
+</div>
+
+<div class="products-row physical-products">
+    <a href="details.php?image=TikVideo.app_7358812542086515974_5.jpeg&product_name=Key%20Chain%20(Frog)&category=Physical%20Products&creator=Arshane%20Lee&price=70" class="cell-more-button">
+        <span class="button-text">View Details</span>
+    </a>
+    <div class="product-cell image">
+        <img src="img/ProdImg/TikVideo.app_7358812542086515974_5.jpeg" alt="product">
+        <span>Key Chain (Frog)</span>
+    </div>
+    <div class="product-cell category"><span class="cell-label">Category:</span>Physical Products</div>
+    <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
+    <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
+    <div class="product-cell price"><span class="cell-label">Price:</span>₱70</div>
+</div>
+
+<div class="products-row physical-products">
+    <a href="details.php?image=p16.png&product_name=Tumbler&category=Physical%20Products&creator=Arshane%20Lee&price=100" class="cell-more-button">
+        <span class="button-text">View Details</span>
+    </a>
+    <div class="product-cell image">
+        <img src="img/ProdImg/p16.png" alt="product">
+        <span>Tumbler</span>
+    </div>
+    <div class="product-cell category"><span class="cell-label">Category:</span>Physical Products</div>
+    <div class="product-cell creator"><span class="cell-label">Creator:</span>Arshane Lee</div>
+    <div class="product-cell sales"><span class="cell-label">Sales:</span>11</div>
+    <div class="product-cell price"><span class="cell-label">Price:</span>₱100</div>
+</div>
+
+
       </div>
     </div>
   </div>

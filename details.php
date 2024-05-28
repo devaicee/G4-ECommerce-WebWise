@@ -54,17 +54,27 @@ include 'assets/layouts/header.php';
                         <li><a href="#"><span>Creator</span> : <?php echo htmlspecialchars($creator); ?></a></li>
                     </ul>
                     <p>Product description can go here. This is a placeholder for the product details.</p>
-                    <div class="product_count">
-                        <label for="qty">Quantity:</label>
-                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
-                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;" class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;" class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
-                    </div>
-                    <div class="card_area d-flex align-items-center">
-                        <a class="primary-btn" href="cart.php">Add to Cart</a>
-                        <a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
-                        <a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
-                    </div>
+                    <form action="cart.php" method="post">
+                        <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($product_id); ?>">
+                        <input type="hidden" name="product_name" value="<?php echo htmlspecialchars($product_name); ?>">
+                        <input type="hidden" name="price" value="<?php echo htmlspecialchars($price); ?>">
+                        <input type="hidden" name="unique_id" value="<?php echo htmlspecialchars(uniqid()); ?>"> <!-- Unique identifier -->
+                        <div class="product_count">
+                            <label for="qty">Quantity:</label>
+                            <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
+                            <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;" class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+                            <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) && sst > 0 ) result.value--;return false;" class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+                        </div>
+                        <button type="submit" name="add_to_cart" class="primary-btn">Add to Cart</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
                 </div>
             </div>
         </div>

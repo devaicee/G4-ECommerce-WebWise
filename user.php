@@ -1,9 +1,54 @@
 <?php
 
-define('TITLE', "Home");
+define('TITLE', "User Profile");
 include 'assets/layouts/header.php';
 
+function xss_filter($data) {
+	$data = trim($data);
+	$data = stripslashes($data);
+	$data = htmlspecialchars($data);
+	return $data;
+}
+
 ?>
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Submit Recommendation</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="recommendationForm">
+          <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+          </div>
+          <div class="form-group">
+            <label for="rating">Rating:</label>
+            <select class="form-control" id="rating">
+              <option value="1">1 Star</option>
+              <option value="2">2 Stars</option>
+              <option value="3">3 Stars</option>
+              <option value="4">4 Stars</option>
+              <option value="5">5 Stars</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="recommendationText">Recommendation:</label>
+            <textarea class="form-control" id="recommendationText" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 	<body class="profile-page">
     <div class="page-header header-filter" data-parallax="true" style="background-image:url('http://wallpapere.org/wp-content/uploads/2012/02/black-and-white-city-night.png');"></div>
@@ -30,39 +75,59 @@ include 'assets/layouts/header.php';
                     <p>A visionary BSIT student who not only offers cutting-edge digital products but also crafts bespoke projects and designs captivating websites. 
 											Dive into a realm of innovation and style with me – where technology meets creativity, and your digital aspirations come to life.</p>
                 </div>
+<style>
+    .category-header h1 {
+        color: #ffba00; /* Change text color of header to yellow */
+    }
+</style>
 
-						<div class="user-section">
-							<div class="uServices-area">
-									<div class="container">
-										<div class="row justify-content-center">
-											<div class="col-lg-8 col-md-12">
-												<div class="row">
-													<div class="col-12">
-														<div class="category-header">
-														<h1>Services</h1>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="uProducts-area">
-									<div class="container">
-										<div class="row justify-content-center">
-											<div class="col-lg-8 col-md-12">
-												<div class="row">
-													<div class="col-12">
-														<div class="category-header">
-														<h1>Products</h1>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>	
-						</div>						
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-6 text-center">
+            <div class="category-header">
+                <h1>Products</h1>
+            </div>
+            <div class="uProducts-area">
+                <!-- Products Content Goes Here -->
+				<div class="product-details" style="display: flex; flex-wrap: nowrap;margin-top:40px;">
+                    <div class="product-cell category" style="margin-right: 10px;"><span class="cell-label"></span>Physical Product</div>
+                    <div class="product-cell creator" style="margin-right: 10px;"><span class="cell-label"></span>Thumbler</div>
+                    <div class="product-cell sales" style="margin-right: 10px;"><span class="cell-label">Sales:</span> 14</div>
+                    <div class="product-cell price"><span class="cell-label">Price:</span> ₱100</div>
+                </div>
+				<div class="product-details" style="display: flex; flex-wrap: nowrap;margin-top:8px;">
+                    <div class="product-cell category" style="margin-right: 10px;"><span class="cell-label"></span>Physical Product</div>
+                    <div class="product-cell creator" style="margin-right: 10px;"><span class="cell-label"></span>WebWise T-shirt</div>
+                    <div class="product-cell sales" style="margin-right: 10px;"><span class="cell-label">Sales:</span> 14</div>
+                    <div class="product-cell price"><span class="cell-label">Price:</span> ₱100</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 text-center">
+            <div class="category-header">
+                <h1>Services</h1>
+            </div>
+            <div class="uServices-area">
+                <!-- Services Content Goes Here -->
+                <div class="product-details" style="display: flex; flex-wrap: nowrap;margin-top:10px;">
+                    <div class="product-cell category" style="margin-right: 10px;"><span class="cell-label"></span>Digital Marketing</div>
+                    <div class="product-cell creator" style="margin-right: 10px;"><span class="cell-label"></span>Digital Projects</div>
+                    <div class="product-cell sales" style="margin-right: 10px;"><span class="cell-label">Sales:</span> 14</div>
+                    <div class="product-cell price"><span class="cell-label">Price:</span> ₱450</div>
+                </div>
+				<div class="product-details" style="display: flex; flex-wrap: nowrap;margin-top:10px;">
+                    <div class="product-cell category" style="margin-right: 10px;"><span class="cell-label"></span> Digital Marketing</div>
+                    <div class="product-cell creator" style="margin-right: 10px;"><span class="cell-label"></span>Digital Service</div>
+                    <div class="product-cell sales" style="margin-right: 10px;"><span class="cell-label">Sales:</span> 12</div>
+                    <div class="product-cell price"><span class="cell-label">Price:</span> ₱560</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+					
 					
           <div class="tab-content tab-space">
           <div class="tab-pane active text-center gallery" id="studio">
@@ -84,35 +149,22 @@ include 'assets/layouts/header.php';
   </div>
   
   <footer class="footer text-center ">
-        <p>Write <a href="https://demos.creative-tim.com/material-kit/index.html" target="_blank">Arshane Lee</a> a recommendation</p>
+	<p>Write <a href="#" id="recommendationLink">Arshane Lee</a> a recommendation</p>
     </footer>
   
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
-
 <!-- Start review Area -->
 <section class="review-area section-gap relative">
 	<div class="overlay overlay-bg"></div>
 	<div class="container">				
 		<div class="row">
-			<div class="active-review-carusel">
-				<div class="single-review item">
-					<div class="title justify-content-start d-flex">
-						<a href="#"><h4>Fannie Rowe</h4></a>
-						<div class="star">
-							<span class="fa fa-star checked"></span>
-							<span class="fa fa-star checked"></span>
-							<span class="fa fa-star checked"></span>
-							<span class="fa fa-star"></span>
-							<span class="fa fa-star"></span>
-						</div>
-					</div>
-					<p>
-						The platform looks great and so easy to navigate. Thank you for creating this space for us freelancers.
-					</p>
-				</div>
+		<div class="active-review-carusel">
+        <!-- Recommendations will be appended here -->
+        <div id="reviews" class="active-review-carousel">
+          <!-- Recommendations will be appended here -->
+        </div>
+        <!-- End of Recommendations -->
+        
+        <!-- Other reviews -->
 				<div class="single-review item">
 					<div class="title justify-content-start d-flex">
 						<a href="#"><h4>Armana Penchang</h4></a>
@@ -164,3 +216,46 @@ include 'assets/layouts/header.php';
 include 'assets/layouts/footer.php'
 
 ?>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function() {
+      // Add click event listener to the recommendation link
+      $("#recommendationLink").click(function(e) {
+        e.preventDefault(); // Prevent default link behavior
+        $("#myModal").modal("show"); // Show the modal
+      });
+
+      // Handle form submission for recommendation
+      $("#recommendationForm").submit(function(e) {
+        e.preventDefault(); // Prevent default form submission
+        var name = $("#name").val(); // Get name
+        var rating = parseInt($("#rating").val()); // Get rating
+        var recommendationText = $("#recommendationText").val(); // Get recommendation text
+        $("#myModal").modal("hide"); // Hide the modal
+        displayRecommendation(name, rating, recommendationText); // Display the recommendation
+      });
+
+      // Function to display recommendation in the reviews section
+      function displayRecommendation(name, rating, recommendation) {
+        var stars = '';
+        for (var i = 0; i < rating; i++) {
+          stars += '<span class="fa fa-star checked"></span>';
+        }
+        for (var i = rating; i < 5; i++) {
+          stars += '<span class="fa fa-star"></span>';
+        }
+        var recommendationItem = '<div class="single-review item">' +
+          '<div class="title justify-content-start d-flex">' +
+          '<h4>' + name + '</h4>' +
+          '<div class="star">' + stars + '</div>' +
+          '</div>' +
+          '<p>' + recommendation + '</p>' +
+          '</div>';
+        $("#reviews").append(recommendationItem);
+      }
+    });
+  </script>

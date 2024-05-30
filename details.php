@@ -51,9 +51,13 @@ include 'assets/layouts/header.php';
                     <h2>₱<?php echo htmlspecialchars($price); ?></h2>
                     <ul class="list">
                         <li><a class="active" href="#"><span>Category</span> : <?php echo htmlspecialchars($category); ?></a></li>
-                        <li><a href="#"><span>Creator</span> : <?php echo htmlspecialchars($creator); ?></a></li>
+                        <a href="user.php?creator=<?php echo urlencode($creator); ?>">
+							<span>Creator</span> : <?php echo htmlspecialchars($creator); ?>
+						</a>
                     </ul>
-                    <p>Product description can go here. This is a placeholder for the product details.</p>
+					<br>
+					<br>
+					
                     <form action="cart.php" method="post">
                         <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($product_id); ?>">
                         <input type="hidden" name="product_name" value="<?php echo htmlspecialchars($product_name); ?>">
@@ -207,24 +211,20 @@ include 'assets/layouts/header.php';
 											<a class="reply_btn" href="#">Reply</a>
 										</div>
 									</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-										commodo</p>
+									<p>"This digital product offers a sleek design, intuitive navigation, and robust features that cater perfectly to its target audience, making it a standout choice in the crowded digital marketplace."</p>
 								</div>
 								<div class="review_item reply">
 									<div class="media">
 										<div class="d-flex">
 											<img src="img/product/review-2.png" alt="">
 										</div>
-										<div class="media-body">
-											<h4>Blake Ruiz</h4>
+								    <div class="media-body">
+											<h4>Markly</h4>
 											<h5>12th Feb, 2018 at 05:56 pm</h5>
 											<a class="reply_btn" href="#">Reply</a>
 										</div>
 									</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-										commodo</p>
+									<p>"This digital product offers a sleek design, intuitive navigation, and robust features that cater perfectly to its target audience, making it a standout choice in the crowded digital marketplace."</p>
 								</div>
 								<div class="review_item">
 									<div class="media">
@@ -232,14 +232,12 @@ include 'assets/layouts/header.php';
 											<img src="img/product/review-3.png" alt="">
 										</div>
 										<div class="media-body">
-											<h4>Blake Ruiz</h4>
+											<h4>Benjamin</h4>
 											<h5>12th Feb, 2018 at 05:56 pm</h5>
 											<a class="reply_btn" href="#">Reply</a>
 										</div>
 									</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-										commodo</p>
+									<p>"User-friendly interface, seamless functionality, and excellent customer support make this digital product a must-have for anyone looking to streamline their workflow</p>
 								</div>
 							</div>
 						</div>
@@ -319,9 +317,7 @@ include 'assets/layouts/header.php';
 											<i class="fa fa-star"></i>
 										</div>
 									</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-										commodo</p>
+									<p>"Impressive digital product! The user interface is clean and intuitive, and the features are exactly what I needed to boost my productivity."</p>
 								</div>
 								<div class="review_item">
 									<div class="media">
@@ -329,7 +325,7 @@ include 'assets/layouts/header.php';
 											<img src="img/product/review-2.png" alt="">
 										</div>
 										<div class="media-body">
-											<h4>Blake Ruiz</h4>
+											<h4>Alex White</h4>
 											<i class="fa fa-star"></i>
 											<i class="fa fa-star"></i>
 											<i class="fa fa-star"></i>
@@ -337,9 +333,7 @@ include 'assets/layouts/header.php';
 											<i class="fa fa-star"></i>
 										</div>
 									</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-										commodo</p>
+									<p>"This digital product exceeded my expectations! The functionality is top-notch, and it has significantly improved the way I manage my tasks and projects."</p>
 								</div>
 								<div class="review_item">
 									<div class="media">
@@ -347,7 +341,7 @@ include 'assets/layouts/header.php';
 											<img src="img/product/review-3.png" alt="">
 										</div>
 										<div class="media-body">
-											<h4>Blake Ruiz</h4>
+											<h4>Reb Mahilum</h4>
 											<i class="fa fa-star"></i>
 											<i class="fa fa-star"></i>
 											<i class="fa fa-star"></i>
@@ -355,9 +349,7 @@ include 'assets/layouts/header.php';
 											<i class="fa fa-star"></i>
 										</div>
 									</div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-										commodo</p>
+									<p>"Five stars for this digital product! It's incredibly user-friendly, and the customer support team is always quick to respond and helpful."</p>
 								</div>
 							</div>
 						</div>

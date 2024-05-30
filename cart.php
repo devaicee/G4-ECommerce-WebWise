@@ -73,8 +73,13 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
                                     <td colspan="2"><h5>₱<?php echo htmlspecialchars($total_price); ?></h5></td>
                                 </tr>
                             </tbody>
+                            
                         </table>
                     </form>
+                    <div class="checkout_btn_inner d-flex align-items-center">
+                                        <a class="gray_btn" href="index.php">Continue Shopping</a	>
+                                        <a class="primary-btn" href="checkout.php">Proceed to checkout</a>
+                                    </div>
                 </div>
             </div>
         </div>

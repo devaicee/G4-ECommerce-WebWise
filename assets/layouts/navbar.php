@@ -43,15 +43,6 @@ if (!isset($_SESSION['auth'])) {
 			</div>
 		</nav>
 	</div>
-	<div class="search_input" id="search_input_box">
-		<div class="container">
-			<form class="d-flex justify-content-between" method="GET" action="">
-				<input type="text" class="form-control" id="search_input" name="search" placeholder="Search Here" value="<?= htmlspecialchars($searchQuery) ?>">
-				<button type="submit" class="btn"></button>
-				<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
-			</form>
-		</div>
-	</div>
 </header>
 
 <?php } else { ?>
@@ -80,6 +71,7 @@ if (!isset($_SESSION['auth'])) {
 								aria-expanded="false"><img src="img/figIcons/header/user.png" alt="User icon" width="23" height="21.23"></a>
 							<ul class="dropdown-menu">
 								<li class="nav-item"><a class="nav-link" href="userProf.php">Profile</a></li>
+								<li class="nav-item"><a class="nav-link" href="orders.php">Orders</a></li>
 								<li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
 							</ul>
 						</li>
@@ -93,15 +85,6 @@ if (!isset($_SESSION['auth'])) {
 				</div>
 			</div>
 		</nav>
-	</div>
-	<div class="search_input" id="search_input_box">
-		<div class="container">
-			<form class="d-flex justify-content-between" method="GET" action="">
-				<input type="text" class="form-control" id="search_input" name="search" placeholder="Search Here" value="<?= htmlspecialchars($searchQuery) ?>">
-				<button type="submit" class="btn"></button>
-				<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
-			</form>
-		</div>
 	</div>
 </header>
 

@@ -20,5 +20,7 @@ By streamlining the purchasing process and offering a user-friendly interface, t
 <h2>👻Contributors</h4>
 Arshane Lee Sucong<br>
 Arman James Dela Pena<br>
-Renz Carlou Castro
+Renz Carlou Castro<br>
+Rheamae Christine Tugaon<br>
+Baby Lyka Cinco
 
